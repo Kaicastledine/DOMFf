@@ -3,7 +3,7 @@
 
 import sys
 import random
-from func.body import *
+from set.body import *
 
 base_url = ""
 
