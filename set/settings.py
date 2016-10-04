@@ -4,7 +4,7 @@ theme = {'BOLD':
          'GREEN':
              ['crossorigin=','content=','prefix=','lang=','integrity=','media=','rel=','http-equiv=','name=','value=','rel='],
          'YELLOW':
-             ['']
+             ['.domff']
          }
 
 # Configuration for useragent
