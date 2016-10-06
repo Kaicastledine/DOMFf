@@ -59,5 +59,8 @@ def check_argv():
             print bcolors.FAIL + "| "+bcolors.ENDC + "Please use : python "+sys.argv[0]+" --url=http://exemple.com"
 def main():
     print_logo()
+    print bcolors.OKGREEN + "---"+bcolors.ENDC
+    print bcolors.BOLD + "Twitter: "+bcolors.ENDC+"@graniet75"
+    print bcolors.OKGREEN + "---" + bcolors.ENDC
     check_argv()
 main()
