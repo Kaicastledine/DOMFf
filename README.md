@@ -3,6 +3,11 @@
 # DOMFf
 + DOM FORENSICS FRAMEWORK
 
+## Requirement
+- Colorama
+- BeautifulSoup
+- Python
+
 #### Start analysis
 ```bash
 python domff.py --url=http://exemple.com
