@@ -4,12 +4,12 @@
 import time
 import os,sys
 import urllib2
-from set.settings import theme,list_agent
+from core.set.settings import theme,list_agent
 from colorama import Fore, Back, Style
 from bs4 import BeautifulSoup
 from datetime import datetime
 import uuid
-from set.color import *
+from core.set.color import *
 source_code = ""
 header_information = ""
 extract_line = ""
@@ -835,7 +835,6 @@ def header(url,redirect_cmd=False,move_cmd=False):
         error = True
     for line in headers:
         if "location" in line:
-            print "cotcot"
             print bcolors.OKBLUE + "|_" + line
             if redirect:
                 user_input = raw_input(bcolors.WARNING + "[+] Moved to : " + line[1] + " follow? [Y/n]"+bcolors.ENDC)
