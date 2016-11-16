@@ -3,7 +3,8 @@
 
 import sys
 import random
-from set.body import *
+from core.set.body import *
+from core.fld.gathering import *
 
 base_url = ""
 
@@ -55,7 +56,13 @@ def check_argv():
                         url_information[1] = "http://" + url_information[1]
                     base_url = url_information[1]
                     header(base_url)
-        else:
+        elif "--dir=" in argv:
+            print "| Soon updated"
+            #folder = gathering()
+            #folder.set_directory(argv.split("--dir=")[1])
+            #folder.check_index()
+            #folder.get_information()
+        elif "--dir=" not in sys.argv[1] and "--url=" not in sys.argv[1]:
             print bcolors.FAIL + "| "+bcolors.ENDC + "Please use : python "+sys.argv[0]+" --url=http://exemple.com"
 def main():
     print_logo()
