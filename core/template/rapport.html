@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOMFf application security report</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<style type="text/css">
+		body
+		{
+			font-family: 'Open Sans', sans-serif;
+		}
+		.container
+		{
+			border-left: 2px dashed #2c3e50;
+		}
+		.first-ul > li
+		{
+			background: #d35400;
+			padding: 5px;
+			color: #eae8e8;
+			font-weight: 700;
+			font-size: 0.8em;
+		}
+		.second-ul > li
+		{
+			background: rgba(0, 128, 0, 0.38);
+		    padding: 5px;
+		    margin: 3px;
+		    color: #2c3e50;
+		    border: 1px solid black;
+		}
+		.alert
+		{
+			border: 1px solid black;
+			color: black !important;
+			border: 1px solid black;
+			background: white !important;
+		}
+		.red
+		{
+			color: firebrick;
+		}
+		pre
+		{
+			color: #2c3e50;
+		}
+		ul
+		{
+			list-style: none;
+		}
+		footer
+		{
+			position: fixed;
+		    padding: 4px;
+		    bottom: 0;
+		    background: #2c3e50;
+		    color: white;
+		    width: 100%;
+		}
+		.remark_ul > li
+		{
+			background: #c0392b;
+		    color: #ecf0f1;
+		    padding: 5px;
+		    font-size: 12px;
+		    margin-bottom: 5px;
+		    border: 1px solid black;
+		}
+		.title
+		{
+			padding: 10px;
+		    font-size: 18px;
+		    font-weight: 500;
+		    color: #2c3e50;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<pre>
+	██████╗  ██████╗ ███╗   ███╗███████╗███████╗
+	██╔══██╗██╔═══██╗████╗ ████║██╔════╝██╔════╝
+	██║  ██║██║   ██║██╔████╔██║█████╗  █████╗
+	██║  ██║██║   ██║██║╚██╔╝██║██╔══╝  ██╔══╝
+	██████╔╝╚██████╔╝██║ ╚═╝ ██║██║     ██║
+	╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚═╝
+	</pre>
+	<div class="remark">
+	<p class="title">1) Remark on application</p>
+	<ul class="remark_ul">
+		<li>Full Path Disclosure (FPD) vulnerabilities enable the attacker to see the path to the webroot/file. e.g.: /home/omg/htdocs/file/.
+Certain vulnerabilities, such as using the load_file() (within a SQL Injection) query to view the page source,
+require the attacker to have the full path to the file they wish to view.
+OWASP: https://www.owasp.org/index.php/Full_Path_Disclosure</li>
+	
+		<li>DOMFf have found deprecated function in your application.
+This can open vulnerabilities please use a replace statement</li>
+	</ul>
+	</div>
+	<p class="title">2) File listing</p>
+	<ul class="first-ul">
+		<li>(/Users/tristangranier/Documents/Clients/regroupmax/regroupmax.com/fr-/inc_maxpanier.php)</li>
+		<ul class="second-ul">
+			<li class="alert">deprecated function : <b class="red">mysql_query(</b></li>
+			<li>replace function : <b>PDO::query()</b></li>
+		</ul>
+		<li >(/Users/tristangranier/Documents/Clients/regroupmax/regroupmax.com/fr-/inc_maxpanier.php)</li>
+		<ul class="second-ul">
+			<li class="alert">deprecated function : <b class="red">mysql_query(</b></li>
+			<li>replace function : <b>PDO::query()</b></li>
+		</ul>
+		<li>(/Users/tristangranier/Documents/Clients/regroupmax/regroupmax.com/fr-/inc_maxpanier.php)</li>
+		<ul class="second-ul">
+			<li class="alert">deprecated function : <b class="red">mysql_query(</b></li>
+			<li>replace function : <b>PDO::query()</b></li>
+		</ul>
+		<li >(/Users/tristangranier/Documents/Clients/regroupmax/regroupmax.com/fr-/inc_maxpanier.php)</li>
+		<ul class="second-ul">
+			<li class="alert">deprecated function : <b class="red">mysql_query(</b></li>
+			<li>replace function : <b>PDO::query()</b></li>
+		</ul>
+		<li>(/Users/tristangranier/Documents/Clients/regroupmax/regroupmax.com/fr-/inc_maxpanier.php)</li>
+		<ul class="second-ul">
+			<li class="alert">deprecated function : <b class="red">mysql_query(</b></li>
+			<li>replace function : <b>PDO::query()</b></li>
+		</ul>
+		<li >(/Users/tristangranier/Documents/Clients/regroupmax/regroupmax.com/fr-/inc_maxpanier.php)</li>
+		<ul class="second-ul">
+			<li class="alert">deprecated function : <b class="red">mysql_query(</b></li>
+			<li>replace function : <b>PDO::query()</b></li>
+		</ul>
+		<li>(/Users/tristangranier/Documents/Clients/regroupmax/regroupmax.com/fr-/inc_maxpanier.php)</li>
+		<ul class="second-ul">
+			<li class="alert">deprecated function : <b class="red">mysql_query(</b></li>
+			<li>replace function : <b>PDO::query()</b></li>
+		</ul>
+		<li >(/Users/tristangranier/Documents/Clients/regroupmax/regroupmax.com/fr-/inc_maxpanier.php)</li>
+		<ul class="second-ul">
+			<li class="alert">deprecated function : <b class="red">mysql_query(</b></li>
+			<li>replace function : <b>PDO::query()</b></li>
+		</ul>
+	</ul>
+	<footer>@graniet | Tristan Granier | @graniet75</footer>
+	</div>
+</body>
+</html>
